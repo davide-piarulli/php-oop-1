@@ -14,4 +14,8 @@ class Movie
     $this->genre = $_genre;
     $this->rating = $_rating;
   }
+
+  public function getFullMovie(){
+    return "$this->title, $this->plot, $this->genre, $this->rating";
+  }
 }
