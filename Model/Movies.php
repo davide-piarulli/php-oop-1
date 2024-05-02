@@ -4,18 +4,19 @@ class Movie
 {
   public $title;
   public $plot;
-  public $genre;
+  public $genres;
   public $rating;
 
-  public function __construct(string $_title, string $_plot, string $_genre, float $_rating)
+  public function __construct(string $_title, string $_plot, array $_genres, float $_rating)
   {
     $this->title = $_title;
     $this->plot = $_plot;
-    $this->genre = $_genre;
+    $this->genres = $_genres;
     $this->rating = $_rating;
   }
 
-  public function getFullMovie(){
-    return "$this->title, $this->plot, $this->genre, $this->rating";
+  public function getFullMovie()
+  {
+    echo "$this->title, $this->plot, $this->genres, $this->rating";
   }
 }
